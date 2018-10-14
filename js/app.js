@@ -2,45 +2,58 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript loaded');
 
   const handleFormSubmit = function(event) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const container = document.createElement('div')
+    const container = document.createElement('tr');
 
-    const createName = document.createElement('p');
-    createName.textContent = `Name: ${event.target.name.value}`;
-    container.appendChild(createName)
+    const createDate = document.createElement('td');
+    createDate.textContent = `${event.target.date.value}`;
+    container.appendChild(createDate);
 
-    const createAge = document.createElement('p')
-    createAge.textContent = `Age: ${event.target.age.value}`;
-    container.appendChild(createAge)
+    const createName = document.createElement('td');
+    createName.textContent = `${event.target.name.value}`;
+    container.appendChild(createName);
 
-    const createLocation = document.createElement('p')
-    createLocation.textContent = `Location: ${event.target.location.value}`;
-    container.appendChild(createLocation)
+    const createAge = document.createElement('td');
+    createAge.textContent = `${event.target.age.value}`;
+    container.appendChild(createAge);
 
-    const createOutcome = document.createElement('p')
-    createOutcome.textContent = `Outcome: ${event.target.outcome.value}`;
-    container.appendChild(createOutcome)
+    const createLocation = document.createElement('td');
+    createLocation.textContent = `${event.target.location.value}`;
+    container.appendChild(createLocation);
+
+    const createOutcome = document.createElement('td');
+    createOutcome.textContent = `${event.target.outcome.value}`;
+    container.appendChild(createOutcome);
+
+    // const createSpecies = document.createElement('td');
+    // createSpecies.textContent = speciesType(event.target.outcome.value);
+    // container.appendChild(createSpecies);
+
     //
     // const createInjury = document.createElement('p')
     // createInjury.textContent = `Injury: ${event.target.injury.value}`;
     // container.appendChild(createInjury)
 
-    const startPoint = document.querySelector('#shark-attack-file');
+    const startPoint = document.querySelector('.shark_attack_table');
     startPoint.appendChild(container);
-debugger;
+
     const form = event.target;
     form.reset();
+
+    // const speciesType = function(event.target.location.value){
+    //     if(event.target.location.value === "Asia"){let species = "Tiger Shark"};
+    //     elsif(event.target.location.value === "Carribean"){let species = "Bull Shark"};
+    //     elsif(event.target.location.value === "North Africa"){let species = "Oceanic White Tip Shark"
+    //     }else{let species = "Great White Shark"};
+    //   return species;
+    //   };
   };
 
   const handleDeleteBtnClicked = function(event){
-    const sharkAttackFile = document.querySelector('#shark-attack-file');
+    const sharkAttackFile = document.querySelector('.shark_attack_table');
     while(sharkAttackFile.firstChild){sharkAttackFile.removeChild(sharkAttackFile.firstChild)
     };
-  };
-
-  const handleOtherLocationRadio = function(event){
-
   };
 
 

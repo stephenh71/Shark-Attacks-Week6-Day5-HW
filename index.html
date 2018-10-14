@@ -6,24 +6,36 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <script src="js/app.js"></script>
   </head>
+
+    <div class="title">
+    <h1>GLOBAL SHARK ATTACKS 2018</h1>
+    </div>
+
   <body>
+    <h2>New Attack Details:</h2>
     <form id="new-item-form">
       <div id="form-wrapper">
-        <div class="form-item">
-          <label for="title" class="primary">Name</label>
-          <input type="text" id="name" required/>
-        </div>
 
         <div class="form-item">
-          <label for="author" class="primary">Age</label>
+          <label for="date" class="primary">Date :</label>
+          <input type="date" id="date" required/>
+        </div>
+<br>
+        <div class="form-item">
+          <label for="name" class="primary">Name :</label>
+          <input type="text" id="name" required/>
+        </div>
+<br>
+        <div class="form-item">
+          <label for="age" class="primary">Age  :</label>
           <input type="text" id="age" required/>
         </div>
 
         <div class="form-item">
-        <p>Select attack location:</p>
+        <p>Attack location :</p>
           <label for="Location1">Australia</label>
           <input type="radio" id="Location1"
-           name="location" value="Australia">
+           name="location" value="Australia"
 
           <label for="Location2">Asia</label>
           <input type="radio" id="Location2"
@@ -45,7 +57,7 @@
           <input type="radio" id="Location6"
            name="location" value="U.S.">
         </div>
-
+<br>
         <div class="form-item">
           <label for="outcome" class="primary">Outcome</label>
           <select id="outcome">
@@ -81,12 +93,36 @@
               <label for="legs">Legs</label>
           </div>
         </div> -->
-
+<br>
       <input type="submit" value="save"/>
+    </div>
     </form>
 
-    <h1>Shark Attack File</h1>
-    <div id="shark-attack-file"></div>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+   <defs>
+      <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+   </defs>
+   <g class="wavies">
+     <use xlink:href="#gentle-wave" x="50" y="0" fill="#d5d5d5"/>
+     <use xlink:href="#gentle-wave" x="50" y="3" fill="#e5e5e5"/>
+     <use xlink:href="#gentle-wave" x="50" y="6" fill="white"/>
+   </g>
+  </svg>
+
+  <div id="shark-attack-file">
+
+    <h2>Reports</h2>
+
+    <table class = "shark_attack_table" >
+      <th>Date</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Location</th>
+      <th>Outcome</th>
+      <!-- <th>Shark Species</th> -->
+    </table>
+  </div>
+
 
     <input type="button" id="deleteAll" value="Delete All"/>
   </body>
