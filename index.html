@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Shark Attack File</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <form id="new-item-form">
+      <div id="form-wrapper">
+        <div class="form-item">
+          <label for="title" class="primary">Name</label>
+          <input type="text" id="name" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="author" class="primary">Age</label>
+          <input type="text" id="age" required/>
+        </div>
+
+        <div class="form-item">
+        <p>Select attack location:</p>
+          <label for="Location1">Australia</label>
+          <input type="radio" id="Location1"
+           name="location" value="Australia">
+
+          <label for="Location2">Asia</label>
+          <input type="radio" id="Location2"
+           name="location" value="Asia">
+
+          <label for="Location3">Carribean</label>
+          <input type="radio" id="Location3"
+           name="location" value="Carribean">
+
+          <label for="Location4">North Africa</label>
+          <input type="radio" id="Location4"
+           name="location" value="North Africa">
+
+          <label for="Location5">South Africa</label>
+          <input type="radio" id="Location5"
+           name="location" value="South Africa">
+
+          <label for="Location6">U.S.</label>
+          <input type="radio" id="Location6"
+           name="location" value="U.S.">
+        </div>
+
+        <div class="form-item">
+          <label for="outcome" class="primary">Outcome</label>
+          <select id="outcome">
+            <option value="" disabled selected></option>
+            <option value="Fatal">Fatal</option>
+            <option value="Non-fatal">Non-fatal</option>
+          </select>
+        </div>
+
+        <!-- <div class="form-item">
+        <legend>Injuries:</legend>
+          <div>
+              <input type="checkbox" id="head" name="injury"
+                     value="head">
+              <label for="head">Head</label>
+          </div>
+
+          <div>
+              <input type="checkbox" id="torso" name="injury"
+                     value="torso">
+              <label for="torso">Torso</label>
+          </div>
+
+          <div>
+              <input type="checkbox" id="arms" name="injury"
+                     value="arms">
+              <label for="arms">Arms</label>
+          </div>
+
+          <div>
+              <input type="checkbox" id="legs" name="injury"
+                     value="legs">
+              <label for="legs">Legs</label>
+          </div>
+        </div> -->
+
+      <input type="submit" value="save"/>
+    </form>
+
+    <h1>Shark Attack File</h1>
+    <div id="shark-attack-file"></div>
+
+    <input type="button" id="deleteAll" value="Delete All"/>
+  </body>
+</html>
